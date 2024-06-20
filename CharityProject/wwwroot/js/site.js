@@ -5,6 +5,9 @@
 
 let header = document.querySelector("#header");
 let navButton = document.querySelector(".nav-button");
+let posts = document.querySelectorAll(".post");
+let postImages = document.querySelectorAll(".post-image");
+
 document.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
         header.classList.add("header-fixed");
@@ -15,4 +18,12 @@ document.addEventListener("scroll", () => {
         header.classList.remove("header-fixed");
         navButton.classList.remove("nav-button-green")
     }
+})
+posts.forEach((p, i) => {
+    p.addEventListener("mouseenter", () => {
+        postImages[i].classList.add("post-image-hovered");
+    })
+    p.addEventListener("mouseleave", () => {
+        postImages[i].classList.remove("post-image-hovered");
+    })
 })

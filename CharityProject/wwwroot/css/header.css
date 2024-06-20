@@ -1,19 +1,34 @@
-﻿header {
+﻿.header-placeholder {
+    height: 64px;
+    width: 100%;
+    margin: 0.75rem 1.5rem;
+}
+header {
     background-color: white;
-    padding: 0.75rem 1.5rem;
     position: fixed;
-    width: 90%;
+    width: 100%;
     transition: 0.2s;
+    height: 64px;
+    z-index: 10;
+    max-width: 1120px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1rem;
 }
 .header-normal {
-    margin: 2rem 4rem 0 4rem;
     border-radius: 2rem;
+    margin-top: 0.5rem;
 }
 .header-fixed {
     width: 100%;
+    max-width: 100%;
+    padding: 0 4rem;
+    box-shadow: 0 6px 14px #0000001a;
 }
 nav {
     display: flex;
+    height: 100%;
     justify-content: space-between;
     align-content: center;
     align-items:center;
@@ -32,10 +47,16 @@ nav {
 .nav-search img {
     height: 20px;
 }
+.nav-left, .nav-right {
+    width: 350px;
+}
 .nav-left, .nav-right, .nav-image {
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+.nav-right {
+    justify-content: flex-end;
 }
 .nav-button {
     padding: 0.25rem 1rem;

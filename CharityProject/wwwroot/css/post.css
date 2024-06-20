@@ -1,0 +1,82 @@
+﻿.post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.post-page h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.post-hero img {
+    height: 420px;
+    width: 720px;
+    max-width: 720px;
+    object-fit: cover;
+    border-radius: 0.875rem;
+}
+.post-info {
+    display: flex;
+    gap: 2rem;
+}
+.post-body {
+    max-width: 730px;
+}
+.donation-sidebar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.donation-button {
+    border: none;
+    width: 100%;
+    background: linear-gradient(180deg,#fdb933,#f99a32);
+    padding: 0.5rem 0;
+    min-height: 3rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 0.675rem;
+    margin-top: 0.5rem;
+}
+.donor img {
+    height: 40px;
+    width: 40px;
+    border-radius: 1rem;
+}
+.donor {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.donor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.donor-amount {
+    font-weight: 700;
+}
+.donor-amount span {
+    margin-left: 0.75rem;
+    font-size: 0.75rem;
+}
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.75rem 0;
+}
+.post-author img {
+    height: 40px;
+    width: 40px;
+    border-radius: 0.875rem;
+}
+.post-attributes button {
+    border: 1px solid #008748;
+    cursor: pointer;
+    color: #008748;
+    background-color: #e6f6ef;
+    font-weight: 900;
+    padding: 0.25rem 0.75rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}

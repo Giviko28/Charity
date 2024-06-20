@@ -3,8 +3,70 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<link rel="stylesheet" href="~/@(nameof(CharityProject)).styles.css" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <div class="hero">
+        <img class="hero-image" src="~/images//hero.png" alt="Alternate Text" />
+    </div>
+    <div class="hero-content">
+        <p class="hero-paragraph">Leading crowdfunding platform</p>
+        <h1 class="hero-heading">Every penny matters</h1>
+        <a class="hero-button">Start a Ufund</a>
+    </div>
+</div>
+
+<div class="posts-wrapper">
+    <div class="posts">
+        <h2 class="posts-heading">Discover fundraisers inspired by what you care about</h2>
+        <div class="posts-control">
+            <select class="posts-filter">
+                <option value="1">Nearby</option>
+            </select>
+            <div class="posts-pagination">
+                <span><--</span>
+                <span>--></span>
+            </div>
+        </div>
+        <div class="posts-content">
+            <div class="posts-grid-1">
+                <a>
+                    <div class="post">
+                        <div class="post-image-wrapper">
+                            <img class="post-image" src="/images/Cat03.jpg" alt="Alternate Text" />
+                        </div>
+                        <div class="post-content">
+                            <div class="post-title">@Model.Posts[0].Title</div>
+                            <progress class="post-progress" value="55" max="100"></progress>
+                            <div class="post-totalRaised">
+                                <p>$@Model.Posts[0].DonationGoal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+            <div class="posts-grid-2">
+                <div>
+                    @foreach (var post in Model.Posts.Skip(1).Take(5))
+                    {
+                        <a asp-page="Post" asp-route-id="@post.Id">
+                        <div class="post">
+                            <div class="post-image-wrapper">
+                                <img class="post-image" src="/images/Cat03.jpg" alt="Alternate Text" />
+                            </div>
+                            <div class="post-content">
+                                <div class="post-title">@post.Title</div>
+                                <progress class="post-progress" value="55" max="100"></progress>
+                                <div class="post-totalRaised">
+                                    <p>$@post.DonationGoal</p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

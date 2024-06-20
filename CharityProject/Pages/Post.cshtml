@@ -1,0 +1,46 @@
+﻿@page "{id:int}"
+@model CharityProject.Pages.PostModel
+@{
+    ViewData["Title"] = "Post page";
+}
+
+<div class="post-page">
+    <h1>@Model.Post?.Title</h1>
+    <div class="post-info">
+        <div>
+            <div class="post-hero">
+                <img src="/images/\Cat03.jpg" alt="Alternate Text" />
+            </div>
+            <div class="post-author">
+                <img src="~/images/Cat03.jpg" alt="Profile Picture" />
+                <p>Author is organizing this campaign</p>
+            </div>
+            <hr />
+            <div class="post-attributes">
+                <button>🛡️ Campaign verified</button>
+            </div>
+            <hr />
+            <p class="post-body">
+                I’m helping my sister and my brother in law to create this account to help with my nephew Ulises’s funeral expenses. Whatever money gets collected will pay all the expenses and the rest will be for Ulises’s brother and sisters future education. We are asking for a little bit of your help. Our hearts are broken right now, our nephew lost his life on March 22 as he was coming back home from an enjoyable field day he had from school. He was such a lovely child, was always happy and was just an innocent kid. He now leaves his family in so much pain, please help us to make this a little less stressful for them as they are very devastated at this time.
+            </p>
+        </div>
+      
+
+        <div class="donation-sidebar">
+            <p>$96000 <span>USD raised of $100,000 Goal</span></p>
+            <progress class="post-progress" value="75" max="100"></progress>
+            <button class="donation-button">Donate now</button>
+            @for (int i = 0; i<6; i++)
+            {
+                <div class="donor">
+                    <img src="~/images/Cat03.jpg" alt="Profile Picture" />
+                    <div class="donor-details">
+                        <p>Givson tyson</p>
+                        <p class="donor-amount">$10<span>23 d</span></p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

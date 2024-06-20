@@ -4,16 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CharityProject</title>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/post.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+
 @*     <link rel="stylesheet" href="~/CharityProject.styles.css" asp-append-version="true" />
  *@</head>
 <body>
+    <div class="header-placeholder"></div>
     <header class="header-normal" id="header">
         <nav>
             <div class="nav-left">
                 <div class="nav-search">
-                    <img src="images/searchlogo.jpg" alt="SLOGO" />
+                    <img src="/images/searchlogo.jpg" alt="SLOGO" />
                     <p>
                         Search
                     </p>
@@ -30,19 +34,13 @@
                 </div>
             </div>
             <div class="nav-image">
-                <img src="images/navlogo.png" alt="Alternate Text" />
+                <a asp-page="/Index">
+                    <img src="/images/navlogo.png" alt="Alternate Text" />
+                </a>
             </div>
             <div class="nav-right">
-                <div>
-                    <p>
-                        About
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Sign in
-                    </p>
-                </div>
+            
+                <partial name="_LoginPartial" />
                 <a class="nav-button" accept-policy>Start a Ufund</a>
             </div>
         </nav>

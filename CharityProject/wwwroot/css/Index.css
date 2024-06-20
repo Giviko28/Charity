@@ -1,0 +1,194 @@
+﻿.hero {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.hero-paragraph {
+    font-size: 1.25rem;
+}
+
+.hero-heading {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    max-width: 350px;
+}
+
+.hero-button {
+    color: #008748;
+    background: white;
+    margin: 1.5rem 0 0;
+    padding: 0,5rem 1.5rem;
+    min-height: 3.5rem;
+    min-width: 13.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    font-weight: 700;
+    align-items: center;
+}
+
+.posts-wrapper {
+    width: 100%;
+    background-color: white;
+}
+
+.posts {
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 9rem;
+}
+
+.posts-heading {
+    padding: 4rem 0 2rem 0;
+}
+
+.posts-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.posts-filter {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.posts-pagination {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.posts-pagination span {
+    border: 1px solid gray;
+    border-radius: 1.75rem;
+    padding: 0.5rem 0.25rem;
+}
+
+.posts-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.posts-grid-1 .post {
+    max-width: 536px;
+}
+
+.posts-grid-1 .post-image-wrapper {
+    overflow: hidden;
+    height: 440px;
+    border-radius: 0.875rem;
+}
+
+.posts-grid-1 img {
+    height: 440px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.posts-grid-2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.posts-grid-2 > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+gap: 1rem;
+}
+
+.posts-grid-2 .post {
+    max-width: 264px;
+}
+
+.posts-grid-2 .post-image-wrapper {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 0.875rem;
+}
+
+.posts-grid-2 img {
+    height: 150px;
+    width: 263px;
+    object-fit: cover;
+}
+
+.post {
+    border-radius: 1rem;
+    transition-duration: 1s;
+    object-fit: cover;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 0.75rem;
+}
+
+.post-title {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.post-progress {
+    margin-top: 1.5rem;
+    background-color: #e6f6ef;
+    color: #02a95c;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    border: none;
+    appearance: none;
+    width: 100%;
+}
+
+.post-totalRaised p {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.post:hover {
+    background-color: #f9f2f2;
+}
+
+.post-image {
+    overflow: hidden;
+    transform: scale(1.0);
+    transition-duration: 0.5s;
+}
+
+.post-image-hovered {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+}
+
+.hero-image {
+    width: 100%;
+}
+.hero-image {
+    width: 100%;
+}

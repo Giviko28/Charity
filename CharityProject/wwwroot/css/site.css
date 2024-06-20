@@ -6,14 +6,19 @@
     box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 400;
-    color: #333;
+    color: #333333;
 }
 a {
     text-decoration: none !important;
+    
+}
+body {
+    overflow: hidden;
 }
 html {
   font-size: 14px;
   height: 5000px;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -33,5 +38,5 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: red;
 }
+
