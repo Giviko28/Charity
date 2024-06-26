@@ -1,0 +1,86 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    color: #333333;
+}
+.back {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.login {
+    display: flex;
+    max-width: 900px;
+    width: 850px;
+    max-height: 500px;
+    gap: 2rem;
+}
+img {
+    max-width: 450px;
+}
+h1 {
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+form {
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+    max-width: 450px;
+    min-width: 200px;
+    width: 100%;
+}
+.input-div input {
+    padding: 0.75rem 0.75rem;
+    border: 1px solid black;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+input::placeholder
+{
+    font-weight: 600;
+}
+span {
+    color: red;
+}
+.input-div {
+
+}
+button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #008748;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+button:hover {
+    background-color: #046107;
+    color: white;
+}
+.sign-up, .login-page-btn {
+    color: #008748;
+}
+.form-policy {
+    display: flex;
+    gap: 1rem;
+}

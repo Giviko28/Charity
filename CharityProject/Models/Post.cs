@@ -9,8 +9,6 @@ namespace CharityProject.Models
         public string Title { get; set; }
         public string Body { get; set; }
         public int DonationGoal { get; set; }
-        [ForeignKey("IdentityUser")]
-        public IdentityUser User { get; set; }
-
+        public ICollection<Donation> Donations { get; set; }
     }
 }

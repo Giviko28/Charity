@@ -1,6 +1,7 @@
 ﻿.post-page {
     max-width: 1120px;
     margin: 0 auto;
+    height: 2500px;
 }
 
 .post-page h1 {
@@ -25,6 +26,9 @@
     width: 100%;
     position: sticky;
     top: 0;
+    padding: 1.5rem;
+    box-shadow: 0 6px 14px #0000001a;
+    border-radius: 0.875rem;
 }
 .donation-button {
     border: none;
@@ -46,6 +50,7 @@
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    align-items: center;
 }
 .donor-details {
     display: flex;
@@ -79,4 +84,7 @@
     padding: 0.25rem 0.75rem;
     margin: 1rem 0;
     border-radius: 1rem;
+}
+.post-body {
+    margin-top: 1rem;
 }

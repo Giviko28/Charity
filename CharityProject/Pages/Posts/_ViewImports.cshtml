@@ -1,0 +1,4 @@
+﻿@namespace CharityProject.Pages.Posts
+@using Microsoft.AspNetCore.Authorization;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@attribute [Authorize(Policy = "Admin")]
