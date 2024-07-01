@@ -1,0 +1,38 @@
+﻿.donation {
+    max-width: 250px;
+}
+.donation-amounts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+}
+.amount, .custom-amount {
+    padding:1rem;
+    border: none;
+    color: white;
+    background-color: #008748;
+    text-align: center;
+    cursor: pointer;
+    min-width: 50px;
+}
+.custom-amount {
+}
+button {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    color: #008748;
+    background-color: white;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+.donation input{
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+}
+.donation input:disabled {
+
+}

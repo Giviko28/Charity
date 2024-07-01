@@ -16,9 +16,19 @@ namespace CharityProject.Pages
         {
             _context = context;
         }
-        public async Task OnGet(int id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            Post = await _context.Posts.FirstOrDefaultAsync(post => post.Id == id);
+            var post = await _context.Posts
+                .Include(p => p.Donations)
+                    .ThenInclude(p => p.User)
+                .FirstOrDefaultAsync(post => post.Id == id);
+            if (post is null)
+            {
+                return NotFound();
+            }
+            Post = post;
+
+            return Page();
         }
     }
 }

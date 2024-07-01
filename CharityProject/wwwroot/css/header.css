@@ -43,10 +43,21 @@ nav {
 }
 .nav-search {
     display: flex;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    width: 65px;
+    transition-duration: 0.5s;
 }
-.nav-search img {
-    height: 20px;
+.nav-search--expanded {
+    width: 100%;
+    box-shadow: 0 6px 14px #0000001a;
+    background-color: white;
 }
+/*.nav-search:hover {
+    background-color: aliceblue;
+}*/
+
 .nav-left, .nav-right {
     width: 350px;
 }
@@ -73,4 +84,35 @@ nav {
 .nav-button-green {
     background-color: #008748;
     color: white;
+}
+.dropdown {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    list-style: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding:0.5rem;
+    width: 150px;
+    height: 0px;
+    display: none;
+    transition: height;
+    z-index: -1;
+    transition-duration: 0.1s;
+}
+.dropdown-open {
+    height: 100px;
+    display: flex;
+}
+.nav-dropdown {
+    cursor: pointer;
+    position: relative;
+}
+.arrow{
+    transition-duration: 0.1s;
+    display: inline-block;
+}
+.arrow-active {
+    transform: rotate(180deg);
 }

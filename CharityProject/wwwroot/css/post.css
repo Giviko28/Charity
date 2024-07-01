@@ -31,6 +31,9 @@
     border-radius: 0.875rem;
 }
 .donation-button {
+    display: block;
+    text-align: center;
+    align-content: center;
     border: none;
     width: 100%;
     background: linear-gradient(180deg,#fdb933,#f99a32);
@@ -40,6 +43,7 @@
     font-size: 1.25rem;
     border-radius: 0.675rem;
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 .donor img {
     height: 40px;
@@ -87,4 +91,10 @@
 }
 .post-body {
     margin-top: 1rem;
+}
+.empty-donation {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.25rem;
 }

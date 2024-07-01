@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using CharityProject.Data;
 using CharityProject.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace CharityProject.Pages.Posts
 {
@@ -25,6 +26,7 @@ namespace CharityProject.Pages.Posts
 
         public IActionResult OnGet()
         {
+
             return Page();
         }
 

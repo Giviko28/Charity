@@ -1,0 +1,21 @@
+﻿@page
+@model CharityProject.Pages.DonateModel
+
+<script defer src="~/js/donate.js" asp-append-version="true"></script>
+<link href="css/Donate/donate.css" rel="stylesheet" asp-append-version="true" />
+
+<form class="donation" method="post">
+    <h1>Donate</h1>
+    <div class="donation-amounts">
+        <div class="amount">2</div>
+        <div class="amount">5</div>
+        <div class="amount">10</div>
+        <div class="amount">25</div>
+        <div class="amount">50</div>
+        <div class="custom-amount">Custom</div>
+    </div>
+    <input asp-for="Donation.Amount" />
+    <input asp-for="Donation.PostId" hidden value="@Model.Post.Id" />
+    <input asp-for="Donation.UserId" hidden value="@Model.UserId" />
+    <button>Donate</button>
+</form>

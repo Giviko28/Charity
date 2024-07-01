@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/css/post.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
 
+
 @*     <link rel="stylesheet" href="~/CharityProject.styles.css" asp-append-version="true" />
  *@</head>
 <body>
@@ -18,20 +19,26 @@
         <nav>
             <div class="nav-left">
                 <div class="nav-search">
-                    <img src="/images/searchlogo.jpg" alt="SLOGO" />
+                    <i class="bi bi-search"></i>
                     <p>
                         Search
                     </p>
                 </div>
-                <div>
+                <div class="nav-donate">
                     <p>
                         Donate
                     </p>
                 </div>
-                <div>
+                <div class="nav-dropdown">
                     <p>
                         Fundraise
+                        <span class="arrow"><i class="bi bi-caret-up"></i></span>
                     </p>
+                    <ul class="dropdown">
+                        <li>Animals</li>
+                        <li>Elderly</li>
+                        <li>Children</li>
+                    </ul>
                 </div>
             </div>
             <div class="nav-image">
@@ -83,6 +90,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

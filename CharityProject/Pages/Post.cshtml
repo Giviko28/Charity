@@ -29,16 +29,31 @@
         <div class="donation-sidebar">
             <p>$96000 <span>USD raised of $100,000 Goal</span></p>
             <progress class="post-progress" value="75" max="100"></progress>
-            <button class="donation-button">Donate now</button>
-            @for (int i = 0; i<6; i++)
+            <a asp-page="/Donate" asp-route-id="@Model.Post?.Id" class="donation-button">Donate now</a>
+            @if (Model.Post?.Donations is not null && Model.Post?.Donations?.Count > 0)
             {
-                <div class="donor">
-                    <i style="font-size:2rem;" class="bi bi-person"></i>
-                    <div class="donor-details">
-                        <p>Givson tyson</p>
-                        <p class="donor-amount">$10<span>23 d</span></p>
+                foreach (var donation in Model.Post?.Donations)
+                {
+                    <div class="donor">
+                        <i style="font-size:2rem;" class="bi bi-person"></i>
+                        <div class="donor-details">
+                            <p>@donation.User?.UserName</p>
+                            <p class="donor-amount">$@donation.Amount
+                                <span>
+                                    @{
+                                        var timelapsed = DateTime.Now.Subtract(donation.CreatedDate);
+                                    }
+                                    @(timelapsed.Days <= 0 ? $"{timelapsed.Hours}h" : $"{timelapsed.Days}d")
+
+                                </span>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                }
+            }
+            else
+            {
+                <p class="empty-donation">This campaign has no donations</p>
             }
         </div>
     </div>

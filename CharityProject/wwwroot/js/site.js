@@ -27,3 +27,22 @@ posts.forEach((p, i) => {
         postImages[i].classList.remove("post-image-hovered");
     })
 })
+
+let donateAnchor = document.querySelector(".nav-donate");
+let fundraiseAnchor = document.querySelector(".nav-fundraise");
+let searchAnchor = document.querySelector(".nav-search");
+
+searchAnchor.addEventListener("click", () => {
+    console.log("hi");
+    fundraiseAnchor.style.display = "None";
+    donateAnchor.style.display = "None";
+    searchAnchor.classList.toggle("nav-search--expanded");
+})
+
+let navDropdown = document.querySelector(".nav-dropdown");
+let dropdown = document.querySelector(".dropdown");
+let dropdownArrow = document.querySelector(".arrow");
+navDropdown.addEventListener("click", () => {
+    dropdown.classList.toggle("dropdown-open");
+    dropdownArrow.classList.toggle("arrow-active");
+})
