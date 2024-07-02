@@ -16,6 +16,8 @@ namespace CharityProject.Models
         [Required]
         public int Amount { get; set; }
         public DateTime CreatedDate { get; set; }
+
+        [ForeignKey("UserId")]
         public IdentityUser? User { get; set; } = null!;
 
         public Donation()

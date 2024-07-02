@@ -30,30 +30,32 @@
         </div>
         <div class="posts-content">
             <div class="posts-grid-1">
-                <a>
-                    <div class="post">
-                        <div class="post-image-wrapper">
-                            <img class="post-image" src="/images/Cat03.jpg" alt="Alternate Text" />
-                        </div>
-                        <div class="post-content">
-                            <div class="post-title">@Model.Posts[0].Title</div>
-                            <progress class="post-progress" value="55" max="100"></progress>
-                            <div class="post-totalRaised">
-                                <p>$@Model.Posts[0].DonationGoal</p>
+                   @if (Model.Posts is not null)
+                    {
+                    <a asp-page="Post" asp-route-id="@Model.Posts[0].Id">
+                        <div class="post">
+                            <div class="post-image-wrapper">
+                                <img class="post-image" src="@Model.Posts[0].ImageURL" alt="Alternate Text" />
+                            </div>
+                            <div class="post-content">
+                                <div class="post-title">@Model.Posts[0].Title</div>
+                                <progress class="post-progress" value="55" max="100"></progress>
+                                <div class="post-totalRaised">
+                                    <p>$@Model.Posts[0].DonationGoal</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                </a>
+                    </a>
+                    }
             </div>
             <div class="posts-grid-2">
                 <div>
-                    @foreach (var post in Model.Posts.Skip(1).Take(5))
+                    @foreach (var post in Model.Posts.Skip(1).Take(4))
                     {
                         <a asp-page="Post" asp-route-id="@post.Id">
                         <div class="post">
                             <div class="post-image-wrapper">
-                                <img class="post-image" src="/images/Cat03.jpg" alt="Alternate Text" />
+                                <img class="post-image" src="@post.ImageURL" alt="Campaign Picture" />
                             </div>
                             <div class="post-content">
                                 <div class="post-title">@post.Title</div>

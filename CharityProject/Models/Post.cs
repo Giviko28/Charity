@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace CharityProject.Models
 {
@@ -15,6 +16,10 @@ namespace CharityProject.Models
         [Required]
         [Range(1,10000)]
         public int DonationGoal { get; set; }
+        [ValidateNever]
+        public string ImageURL { get; set; }
+
+        [ValidateNever]
         public ICollection<Donation> Donations { get; set; }
     }
 }
