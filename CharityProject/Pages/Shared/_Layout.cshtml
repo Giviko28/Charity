@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/post.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
-
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 @*     <link rel="stylesheet" href="~/CharityProject.styles.css" asp-append-version="true" />
  *@</head>
@@ -81,15 +82,28 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - CharityProject - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-text">
+                <span>&copy; 2024 UniteCorps</span>
+                <span><a asp-area="" asp-page="/Privacy">Privacy</a></span>
+                <span>Terms</span>
+                <span>Legal</span>
+                <span>Your Privacy Choices</span>
+                <span>Accessibility Statement</span>
+            </div>
+            <div class="footer-images">
+                <img src="~/images/appstore.png" alt="App Store Logo" />
+                <img src="~/images/googleplay.png" alt="Google play" />
+            </div>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="~/js/swiper.js"></script>
 
 
     @await RenderSectionAsync("Scripts", required: false)

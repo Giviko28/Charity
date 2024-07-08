@@ -22,9 +22,15 @@ namespace CharityProject.Pages
             _context = context;
         }
 
-        public async Task OnGet()
+        public IActionResult OnGet()
         {
-            Posts = await _context.Posts.ToListAsync();
+            // TODO: Add a donationsReceived column that is preloaded already with the sum of donations received
+            Posts = _context.Posts
+                    .Include(p => p.Donations)
+                    .ThenInclude(p => p.User)
+                    .ToList();
+
+            return Page();
         }
     }
 }

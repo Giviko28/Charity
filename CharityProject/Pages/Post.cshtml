@@ -2,6 +2,8 @@
 @model CharityProject.Pages.PostModel
 @{
     ViewData["Title"] = "Post page";
+    int donationsReceived = Model.Post.Donations.Sum(d => d.Amount);
+    int donationGoal = Model.Post.DonationGoal;
 }
 
 <div class="post-page">
@@ -27,8 +29,11 @@
       
 
         <div class="donation-sidebar">
-            <p>$96000 <span>USD raised of $100,000 Goal</span></p>
-            <progress class="post-progress" value="75" max="100"></progress>
+            <p>
+                @donationsReceived.ToString("C")
+                <span>USD raised of @donationGoal.ToString("C") Goal</span>
+            </p>
+            <progress class="post-progress" value="@donationsReceived" max="@donationGoal"></progress>
             <a asp-page="/Donate" asp-route-id="@Model.Post?.Id" class="donation-button">Donate now</a>
             @if (Model.Post?.Donations is not null && Model.Post?.Donations?.Count > 0)
             {

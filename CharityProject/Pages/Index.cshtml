@@ -18,56 +18,65 @@
 
 <div class="posts-wrapper">
     <div class="posts">
-        <h2 class="posts-heading">Discover fundraisers inspired by what you care about</h2>
         <div class="posts-control">
-            <select class="posts-filter">
-                <option value="1">Nearby</option>
-            </select>
-            <div class="posts-pagination">
-                <span><--</span>
-                <span>--></span>
+            <h2 class="posts-heading">Discover fundraisers inspired by what you care about</h2>
+            <div class="button-prev-wrapper">
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="button-next-wrapper">
+                <div class="swiper-button-next"></div>
             </div>
         </div>
-        <div class="posts-content">
-            <div class="posts-grid-1">
-                   @if (Model.Posts is not null)
-                    {
-                    <a asp-page="Post" asp-route-id="@Model.Posts[0].Id">
-                        <div class="post">
-                            <div class="post-image-wrapper">
-                                <img class="post-image" src="@Model.Posts[0].ImageURL" alt="Alternate Text" />
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="posts">
+                        <div class="posts-content">
+                            <div class="posts-grid-1">
+                                @if (Model.Posts is not null)
+                                {
+                                    <a asp-page="Post" asp-route-id="@Model.Posts[0].Id">
+                                        <div class="post">
+                                            <div class="post-image-wrapper">
+                                                <img class="post-image" src="@Model.Posts[0].ImageURL" alt="Alternate Text" />
+                                            </div>
+                                            <div class="post-content">
+                                                <div class="post-title">@Model.Posts[0].Title</div>
+                                                <progress class="post-progress" value="@Model.Posts[0].Donations.Sum(d => d.Amount)" max="@Model.Posts[0].DonationGoal"></progress>
+                                                <div class="post-totalRaised">
+                                                    <p>$@Model.Posts[0].DonationGoal</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                }
                             </div>
-                            <div class="post-content">
-                                <div class="post-title">@Model.Posts[0].Title</div>
-                                <progress class="post-progress" value="55" max="100"></progress>
-                                <div class="post-totalRaised">
-                                    <p>$@Model.Posts[0].DonationGoal</p>
+                            <div class="posts-grid-2">
+                                <div>
+                                    @foreach (var post in Model.Posts.Skip(1).Take(4))
+                                    {
+                                        <a asp-page="Post" asp-route-id="@post.Id">
+                                            <div class="post">
+                                                <div class="post-image-wrapper">
+                                                    <img class="post-image" src="@post.ImageURL" alt="Campaign Picture" />
+                                                </div>
+                                                <div class="post-content">
+                                                    <div class="post-title">@post.Title</div>
+                                                    <progress class="post-progress" value="@post.Donations.Sum(d => d.Amount)" max="@post.DonationGoal"></progress>
+                                                    <div class="post-totalRaised">
+                                                        <p>$@post.DonationGoal</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </div>
-                    </a>
-                    }
-            </div>
-            <div class="posts-grid-2">
-                <div>
-                    @foreach (var post in Model.Posts.Skip(1).Take(4))
-                    {
-                        <a asp-page="Post" asp-route-id="@post.Id">
-                        <div class="post">
-                            <div class="post-image-wrapper">
-                                <img class="post-image" src="@post.ImageURL" alt="Campaign Picture" />
-                            </div>
-                            <div class="post-content">
-                                <div class="post-title">@post.Title</div>
-                                <progress class="post-progress" value="55" max="100"></progress>
-                                <div class="post-totalRaised">
-                                    <p>$@post.DonationGoal</p>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                    }
+                    </div>
                 </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
             </div>
         </div>
     </div>

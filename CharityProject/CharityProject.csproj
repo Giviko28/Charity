@@ -8,8 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\swiper.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\swiper.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\css\Index.css" />
     <None Include="wwwroot\css\post.css" />
+    <None Include="wwwroot\js\swiper.js" />
   </ItemGroup>
 
   <ItemGroup>
